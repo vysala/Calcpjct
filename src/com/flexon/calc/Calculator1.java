@@ -1,7 +1,7 @@
 package com.flexon.calc;
 import java.util.*;
 
-public class Calculator {
+public class Calculator1 {
 	
 	private static int firstnumber=8;
 	private static int secondnumber=4;
