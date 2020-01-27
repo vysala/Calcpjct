@@ -1,4 +1,4 @@
-package com.flexon.javajenkins;
+package com.flexon.calc;
 import java.util.*;
 
 public class Calculator {

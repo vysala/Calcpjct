@@ -1,6 +1,7 @@
 package test.java;
-import com.flexon.javajenkins.Calculator;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
+import com.flexon.calc.Calculator;
 
 
 // since class methods and variables are static I can use that here without instantiating
