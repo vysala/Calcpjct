@@ -1,10 +1,28 @@
 package com.flexon.calc;
 import java.util.*;
 
-public class Calculator1 {
+public class Calculator {
 	
-	private static int firstnumber=8;
-	private static int secondnumber=4;
+	private static int firstnumber;
+	private static int secondnumber;
+	
+	public static int getFirstnumber() {
+		return firstnumber;
+	}
+
+	public static void setFirstnumber(int firstnumber) {
+		Calculator.firstnumber = firstnumber;
+	}
+
+	public static int getSecondnumber() {
+		return secondnumber;
+	}
+
+	public static void setSecondnumber(int secondnumber) {
+		Calculator.secondnumber = secondnumber;
+	}
+
+	
 	
 	public static Integer sum(Integer x, Integer y)
 	{
@@ -35,7 +53,7 @@ public class Calculator1 {
 		 return x / y;
 		} 
 
-	public static void calculator() {
+	public static void calcfunctions() {
 	    System.out.println("Basic calculator");
 	    System.out.println("1. Addition");
 	    System.out.println("2. Subtraction");
@@ -47,21 +65,27 @@ public class Calculator1 {
 	
 	public static void main(String[] args) {
 		 Scanner input = new Scanner(System.in);
-		 calculator();
+		 calcfunctions();
 		 int choice = input.nextInt();
-		 input.close();
+		 //input.close();
+		 System.out.println("Enter the first number");
+		 int number1=input.nextInt();
+		 System.out.println("Enter the second number");
+		 int number2=input.nextInt();
+	     	Calculator.setFirstnumber(number1);
+	     	Calculator.setSecondnumber(number2);
 		 switch(choice){
 		 case 1:
-			   System.out.println(sum(firstnumber,secondnumber));
+			   System.out.println(sum(getFirstnumber(),getSecondnumber()));
 			    break;
 		 case 2:
-			   System.out.println(difference(firstnumber,secondnumber));
+			   System.out.println(difference(getFirstnumber(),getSecondnumber()));
 			    break;
 		 case 3: 
-			 System.out.println(multiply(firstnumber,secondnumber));
+			 System.out.println(multiply(getFirstnumber(),getSecondnumber()));
 			    break;
 		 case 4:
-			 System.out.println(division(firstnumber,secondnumber));
+			 System.out.println(division(getFirstnumber(),getSecondnumber()));
 			    break;
 		 default:
 			    System.out.println("Wrong Choice");
